@@ -19,13 +19,6 @@ $attachment = __DIR__ . '/anexo.txt';
 $obEmail = new Email;
 $sucesso = $obEmail->sendEMail($addres,$subject,$body, $attachment);
 
-//echo $sucesso ? 'Mensagem enviada com sucesso' : $obEmail->getError();
-
-if ($sucesso)
-{
-    echo 'Mensagem enviada com sucesso';
-}else {
-    $obEmail->getError();
-}
+echo $sucesso ? 'Mensagem enviada com sucesso' : $obEmail->getError();
 
 ?>
